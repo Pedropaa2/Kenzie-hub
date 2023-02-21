@@ -71,6 +71,10 @@ export const StyledContent = styled.section`
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+  }
+  .img_Container:hover {
+    background-color: var(--Grey-03);
   }
   button {
     color: white;

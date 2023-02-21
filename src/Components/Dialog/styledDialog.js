@@ -93,6 +93,9 @@ export const StyledDialog = styled.dialog`
     width: 100%;
     margin-top: 20px;
   }
+  button:hover {
+    background-color: var(--Color-primary-02);
+  }
   .error {
     color: var(--Color-primary-02);
   }

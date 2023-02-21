@@ -94,12 +94,18 @@ export const StyledDialogCreate = styled.dialog`
     border-radius: 4px;
     border: none;
   }
+  .save:hover {
+    background-color: var(--Color-primary);
+  }
   .exclude {
     background-color: var(--Grey-04);
     width: 30%;
     height: 48px;
     border-radius: 4px;
     border: none;
+  }
+  .exclude:hover {
+    background-color: var(--Grey-03);
   }
   @media (min-width: 768px) {
     .modal_Content {

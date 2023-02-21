@@ -10,7 +10,10 @@ export const StyledLi = styled.li`
   justify-content: space-between;
   align-items: center;
   margin-top: 16px;
-
+  cursor: pointer;
+  :hover {
+    background-color: var(--Grey-03);
+  }
   h2 {
     color: var(--Grey-05);
     margin-left: 15px;

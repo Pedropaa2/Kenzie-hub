@@ -27,6 +27,7 @@ export function DialogTech() {
 
   const submit = (formSchema) => {
     submitFunction(formSchema);
+    reset();
   };
 
   return (
