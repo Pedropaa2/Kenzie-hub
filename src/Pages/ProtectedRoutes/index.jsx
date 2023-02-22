@@ -1,6 +1,6 @@
 import React from "react";
 import { useContext } from "react";
-import { LoginContext } from "../../Providers/LoginContext";
+import { LoginContext } from "../../providers/LoginContext";
 import { Outlet, useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 

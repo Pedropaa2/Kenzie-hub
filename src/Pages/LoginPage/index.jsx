@@ -1,18 +1,18 @@
 import React, { useContext } from "react";
-import logo from "../../Assets/Logo.svg";
-import { Input } from "../../Components/Input";
+import logo from "../../assets/Logo.svg";
+import { Input } from "../../components/InputsLoginAndRegister";
 import { useForm } from "react-hook-form";
-import { ThemeButton } from "../../Components/Button/styledButton";
-import { ThemeP } from "../../Styles/typography";
+import { ThemeButton } from "../../components/ButtonBackAndLogout/styledButton";
+import { ThemeP } from "../../styles/typography";
 import { StyledLogin } from "./styledLogin";
-import { ThemeH1 } from "../../Styles/typography";
+import { ThemeH1 } from "../../styles/typography";
 import { useNavigate } from "react-router-dom";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { ToastContainer } from "react-toastify";
 import { Link } from "react-router-dom";
 import "react-toastify/dist/ReactToastify.css";
 import * as yup from "yup";
-import { LoginContext } from "../../Providers/LoginContext";
+import { LoginContext } from "../../providers/LoginContext";
 import { useEffect } from "react";
 
 export function Login() {

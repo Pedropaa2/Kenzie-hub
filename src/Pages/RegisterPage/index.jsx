@@ -3,12 +3,12 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { StyledMain, StyledRegister } from "./styledRegister";
-import { Input } from "../../Components/Input";
-import { ThemeH1, ThemeP } from "../../Styles/typography";
-import { ThemeButton } from "../../Components/Button/styledButton";
-import { Header } from "../../Components/Header";
+import { Input } from "../../components/InputsLoginAndRegister";
+import { ThemeH1, ThemeP } from "../../styles/typography";
+import { ThemeButton } from "../../components/ButtonBackAndLogout/styledButton";
+import { Header } from "../../components/HeaderRegisterAndDash";
 import { useNavigate } from "react-router-dom";
-import { RegisterContext } from "../../Providers/RegisterContext";
+import { RegisterContext } from "../../providers/RegisterContext";
 import { useEffect } from "react";
 
 export function Register() {

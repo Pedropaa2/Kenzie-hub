@@ -1,18 +1,24 @@
 import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import logo from "../../Assets/Logo.svg";
-import { ThemeH1, ThemeP } from "../../Styles/typography";
+import logo from "../../assets/Logo.svg";
+import { ThemeH1, ThemeP } from "../../styles/typography";
 import { StyledSection, StyledContent, StyledDashHeader } from "./styledDash";
-import { LoginContext } from "../../Providers/LoginContext";
-import add from "../../Assets/mais.svg";
-import { LiFunction } from "../../Components/Li/index";
-import { DashContext } from "../../Providers/DashBoardContext";
-import { DialogTech } from "../../Components/Dialog";
-import { DialogCreate } from "../../Components/DialogCreateAndExclude";
+import { LoginContext } from "../../providers/LoginContext";
+import add from "../../assets/mais.svg";
+import { LiFunction } from "../../components/CardTech/index";
+import { DashContext } from "../../providers/DashBoardContext";
+import { DialogTech } from "../../components/DialogCreateTech";
+import { DialogCreate } from "../../components/DialogEditAndExclude";
 
 export function Dash() {
-  const { isAuthenticated, setIsAuthenticated, techs, setTechs } =
-    useContext(LoginContext);
+  const {
+    isAuthenticated,
+    setIsAuthenticated,
+    techs,
+    setTechs,
+    setTechId,
+    setTechName,
+  } = useContext(LoginContext);
   const { setOpenDialog, open, openDialog, setOpen } = useContext(DashContext);
 
   const handleClickToOpen = () => {
@@ -70,9 +76,10 @@ export function Dash() {
               title={li.title}
               status={li.status}
               open={(event) => {
+                setTechId(event.target.id);
+                setTechName(event.target.title);
+
                 onclick();
-                window.localStorage.setItem("techID", event.target.id);
-                window.localStorage.setItem("techTitle", event.target.title);
               }}
             ></LiFunction>
           ))}

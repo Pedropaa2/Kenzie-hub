@@ -1,10 +1,10 @@
 import { StyledDialog } from "./styledDialog";
-import { ThemeH3, ThemeP } from "../../Styles/typography";
+import { ThemeH3, ThemeP } from "../../styles/typography";
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { DashContext } from "../../Providers/DashBoardContext";
+import { DashContext } from "../../providers/DashBoardContext";
 
 export function DialogTech() {
   const { setOpen, open } = useContext(DashContext);

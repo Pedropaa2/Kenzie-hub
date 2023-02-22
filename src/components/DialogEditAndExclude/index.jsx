@@ -1,19 +1,20 @@
-import { ThemeH3 } from "../../Styles/typography";
+import { ThemeH3 } from "../../styles/typography";
 import { useContext } from "react";
 import { useForm } from "react-hook-form";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { DashContext } from "../../Providers/DashBoardContext";
+import { DashContext } from "../../providers/DashBoardContext";
 import { StyledDialogCreate } from "./styledDialodCreate";
+import { LoginContext } from "../../providers/LoginContext";
 
 export function DialogCreate() {
   const { openDialog, setOpenDialog, updateTech, deleteTech } =
     useContext(DashContext);
-
+  const { techName } = useContext(LoginContext);
   const handleToClose = () => {
     setOpenDialog(false);
   };
-  const title = localStorage.getItem("techTitle");
+  const title = techName;
 
   const formSchema = yup.object().shape({});
 

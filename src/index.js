@@ -3,10 +3,10 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
-import { GlobalStyle } from "./Styles/globalstyle";
-import { RegisterProvider } from "./Providers/RegisterContext";
-import { LoginProvider } from "./Providers/LoginContext";
-import { DashProvider } from "./Providers/DashBoardContext";
+import { GlobalStyle } from "./styles/globalstyle";
+import { RegisterProvider } from "./providers/RegisterContext";
+import { LoginProvider } from "./providers/LoginContext";
+import { DashProvider } from "./providers/DashBoardContext";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

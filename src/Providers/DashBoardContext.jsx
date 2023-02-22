@@ -1,5 +1,5 @@
 import { createContext, useContext } from "react";
-import { api } from "../Services/api";
+import { api } from "../services/api";
 import { useState } from "react";
 import { LoginContext } from "./LoginContext";
 import { toast } from "react-toastify";
@@ -7,8 +7,8 @@ import { toast } from "react-toastify";
 export const DashContext = createContext({});
 
 export const DashProvider = ({ children }) => {
-  const { reloadList } = useContext(LoginContext);
-  const id = localStorage.getItem("techID");
+  const { reloadList, techId } = useContext(LoginContext);
+  const id = techId;
 
   const token = localStorage.getItem("@TOKEN");
 

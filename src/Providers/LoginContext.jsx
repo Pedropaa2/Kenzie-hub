@@ -1,6 +1,6 @@
 import { createContext } from "react";
 import React from "react";
-import { api } from "../Services/api";
+import { api } from "../services/api";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { useState } from "react";
@@ -13,6 +13,8 @@ export const LoginProvider = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(
     JSON.parse(localStorage.getItem("name")) || null
   );
+  const [techId, setTechId] = useState();
+  const [techName, setTechName] = useState("");
   const [techs, setTechs] = useState([]);
   const navigate = useNavigate();
   async function submitFunction(data) {
@@ -56,6 +58,10 @@ export const LoginProvider = ({ children }) => {
         techs,
         setTechs,
         reloadList,
+        techId,
+        setTechId,
+        techName,
+        setTechName,
       }}
     >
       {" "}

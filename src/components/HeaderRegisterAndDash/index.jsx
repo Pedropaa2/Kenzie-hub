@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../../Assets/Logo.svg";
+import logo from "../../assets/Logo.svg";
 import { StyledHeader } from "./styledHeader";
 import { Link } from "react-router-dom";
 

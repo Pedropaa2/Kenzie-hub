@@ -1,9 +1,9 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import { Dash } from "../Pages/DashBoard";
-import { Login } from "../Pages/LoginPage";
-import { Register } from "../Pages/RegisterPage";
-import { ProtectedRoutes } from "../Pages/ProtectedRoutes/index";
+import { Dash } from "../pages/DashBoard";
+import { Login } from "../pages/LoginPage";
+import { Register } from "../pages/RegisterPage";
+import { ProtectedRoutes } from "../pages/ProtectedRoutes/index";
 
 export function AppRoutes({ isAuthenticated, setIsAuthenticated }) {
   return (

@@ -1,6 +1,6 @@
 import { createContext } from "react";
 import React from "react";
-import { api } from "../Services/api";
+import { api } from "../services/api";
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 
