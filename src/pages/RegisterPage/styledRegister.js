@@ -17,6 +17,7 @@ export const StyledMain = styled.main`
   h1 {
     display: flex;
     justify-content: center;
+
     margin-bottom: 22px;
   }
   p {
